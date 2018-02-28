@@ -1,0 +1,4 @@
+# USB helper libraries
+
+These libraries provide classes that help in dealing with the Java USB API, CDI support and classes to deal with
+specific USB devices.
