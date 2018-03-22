@@ -32,9 +32,65 @@
         </developer>
     </developers>
 
+    <modules>
+        <module>core</module>
+        <module>cdi</module>
+        <module>webmailnotifier</module>
+    </modules>
+
     <scm>
         <connection>scm:git:git://github.com/schroenser/usb.git</connection>
         <developerConnection>scm:git:ssh://github.com/schroenser/usb.git</developerConnection>
         <url>https://github.com/schroenser/usb</url>
     </scm>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>24.0-jre</version>
+            </dependency>
+            <dependency>
+                <groupId>de.schroenser.usb</groupId>
+                <artifactId>core</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.enterprise</groupId>
+                <artifactId>cdi-api</artifactId>
+                <version>2.0.Beta1</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>javax.usb</groupId>
+                <artifactId>usb-api</artifactId>
+                <version>1.0.2</version>
+            </dependency>
+            <dependency>
+                <groupId>org.assertj</groupId>
+                <artifactId>assertj-core</artifactId>
+                <version>3.9.1</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-all</artifactId>
+                <version>2.0.2-beta</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.16.20</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.testng</groupId>
+                <artifactId>testng</artifactId>
+                <version>6.14.2</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>
